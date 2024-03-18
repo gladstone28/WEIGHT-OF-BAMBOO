@@ -1,4 +1,5 @@
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
@@ -50,5 +51,99 @@ main {
 @media (max-width: 768px) {
     .card {
         width: 95%;
+    }
+}
+
+
+/* Basic Reset */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    font-size: 18px;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    margin: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card h1 {
+    color: #007BFF;
+    margin-bottom: 15px;
+}
+
+.responsive-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.download-button {
+    display: inline-block;
+    background-color: #007BFF;
+    color: #ffffff;
+    padding: 10px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.download-button:hover,
+.download-button:focus {
+    background-color: #0056b3;
+    outline: none;
+}
+
+
+/* Responsive design */
+
+@media screen and (max-width: 768px) {
+    .card {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 16px;
+    }
+    .download-button {
+        padding: 8px 20px;
     }
 }
